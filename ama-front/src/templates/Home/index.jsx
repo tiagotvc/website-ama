@@ -15,8 +15,8 @@ export default function Home () {
         <div className="App">
             <Styled.Wrapper background="blue">
                 <Menu links={links}
-                      text = 'DropDown'
-                      logoData={{srcImg:'', link:'', text:'Amigos dos Autistas',size:'large'}} />
+                      text = 'Conteúdo'
+                      logoData={{srcImg:'assets/images/menor.png', link:'', text:'Amigos dos Autistas',size:'xlarge'}} />
             </Styled.Wrapper>
         </div>
     );

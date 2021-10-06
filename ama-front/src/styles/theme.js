@@ -4,11 +4,13 @@ export const theme = {
       secondaryColor: '#dc143c',
       white: '#FFFFFF',
       mediumGray: '#DDDDDD',
+      blueColor: '#00bfff',
+      pink: 'pink'
     },
     font: {
       family: {
-        default: "'Luckiest Guy', cursive",
-        secondary: "'Luckiest Guy', cursive",
+        default: "Arial",
+        secondary: "Arial",
       },
       sizes: {
         xsmall: '8rem',
@@ -38,8 +40,8 @@ export const theme = {
         small: '7rem',
         medium: '9rem',
         large: '12rem',
-        xlarge: '15rem',
-        huge: '20rem',
+        xlarge: '14.5rem',
+        huge: '17rem',
         xhuge: '22rem',
     },
     dropdown: {

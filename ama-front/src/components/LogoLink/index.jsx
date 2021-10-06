@@ -5,16 +5,18 @@ import React from 'react';
 
 
 
-export const LogoLink = ({ text, srcImg = '' , link , size = 'huge'}) => {
+export const LogoLink = ({ text, srcImg = '' , link , size = 'small'}) => {
     return (
         <Heading size="small" uppercase>
-            <Styled.Container 
-                href={link} 
-                size={size}
-            >
-                {srcImg ? <img src={srcImg} alt={text} />
-                 : 
-                 <span>{text}</span>}
+            <Styled.Container>
+                <Styled.Link 
+                    href={link} 
+                    size={size}
+                >
+                    {srcImg ? <img src={srcImg} alt={text} />
+                    : 
+                    <span>{text}</span>}
+                </Styled.Link>
             </Styled.Container>
         </Heading>
     );

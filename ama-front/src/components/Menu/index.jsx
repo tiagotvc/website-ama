@@ -1,23 +1,26 @@
 import P from 'prop-types';
 import React from 'react';
-import { SectionContainer } from '../SectionContainer';
 import { NavLinks } from '../NavLinks';
 import * as Styled from './styles';
 import { LogoLink } from '../LogoLink';
-import { DropDown } from '../DropDown';
+import { DropDowns } from '../DropDowns';
 
-export const Menu = ({ links = [], logoData, text }) => {
-    console.log(text)
+
+
+export const Menu = ({  logoData }) => {
     return (
+        <>
+     
         <Styled.Container>
-            <SectionContainer>
-                <Styled.MenuContainer>
+                
                     <LogoLink {...logoData}/>
-                    <DropDown text={text} />
-                    <NavLinks links={links} />
-                </Styled.MenuContainer>
-            </SectionContainer>
+                    <DropDowns />
+               
+          
         </Styled.Container>
+        </>
+    
+        
     );
 };
 
