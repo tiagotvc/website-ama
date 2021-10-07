@@ -12,11 +12,17 @@ export const Menu = ({  logoData }) => {
         <>
      
         <Styled.Container>
-                
-                    <LogoLink {...logoData}/>
+            <Styled.SupNav>
+                <LogoLink {...logoData}/>
+                    <nav>
+                       <p>WhatsApp 999999999   </p>
+                       <p>outro texto</p>
+                    </nav>
+            </Styled.SupNav>
+            <Styled.SubNav>
                     <DropDowns />
-               
-          
+            </Styled.SubNav>
+                   
         </Styled.Container>
         </>
     

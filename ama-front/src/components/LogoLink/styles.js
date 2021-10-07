@@ -59,5 +59,9 @@ export const Container = styled.div`
       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;}
       transform:rotate(-20deg);
       margin-top:17px;
+   
+    
+    
+  
 `}
 `;

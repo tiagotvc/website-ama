@@ -61,6 +61,10 @@ export const DropDowns = () => {
                         ))}
                 </Styled.SubNav>
             </li>
+            <li><a  onMouseEnter={onClick}>Autismo</a></li>
+            <li><a  onMouseEnter={onClick}>Voce e a Ama</a></li>
+            <li><a  onMouseEnter={onClick}>Contato</a></li>
+            <li><a  onMouseEnter={onClick}>Loja Virtual</a></li>  
         </ul>
     </Styled.Container>
   );

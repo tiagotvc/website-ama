@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 
 export const Container = styled.nav`
     ${() => css`
-        display:inline-block;
+        display:flex;
         vertical-align: top;
         margin-top: 22px;
         margin-left:50px;
