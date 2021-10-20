@@ -39,6 +39,7 @@ export const Container = styled.nav`
                         align-items: center;
                         display: flex;
                         position:relative;
+                        cursor:pointer;
                        
 
                 > a {
@@ -59,13 +60,11 @@ export const SubNav = styled.div`
             background: #f7f7f7;
             border-radius: 5px;
             box-shadow: 0 10px 8px 0 rgba(0,0,0,0.2);
-            display:${isActive? 'grid' : 'none'};
-            grid-template-columns: repeat(3,1fr);
-            left: -120px;
+            display:${isActive? 'block' : 'none'};
             position: absolute;
-            width:758px;
+            width:258px;
             top:100%;
-            padding:3px;
+         
             margin: 0 auto;
 
             &::after {
@@ -81,12 +80,21 @@ export const SubNav = styled.div`
                 border-bottom-color:#f7f7f7;
                 border-width:20px;
                 border-radius:2px;
-                margin-left:-20px;
+                margin-left:-30px;
+            }
+
+            > ul {
+                display: block;
+                width:100%;
+                padding: 0 0 0 0;
+                margin: 0 0 0 0;
             }
  `}
  `;
 
-export const Grid = styled.div`
+
+
+export const Grid = styled.li`
     ${({ background }) => css`
             background: radial-gradient(${background});
             border-radius:3px;
@@ -96,14 +104,13 @@ export const Grid = styled.div`
             font-size:14px;
             justify-content:center;
             margin: 4px 4px;
-            padding: 24px 14px 14px 96px;
             position: relative;
             transition: .2s all ease-in-out;
             cursor: pointer;
 
             > h4 {
                 color:black;
-                font-size: 14px;
+                font-size: 12px;
                 font-weight: 100;
             }
 
@@ -123,8 +130,8 @@ export const Grid = styled.div`
 
  export const Pictures = styled.div`
         ${({ imgUrl, border }) => css`
-            height: 75px;
-            width: 75px;
+            height: 55px;
+            width: 55px;
             display: flex;
             justify-content: center;
             align-items: center;

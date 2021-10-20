@@ -1,32 +1,47 @@
 import styled, { css } from 'styled-components';
 import { Container as Logo } from '../LogoLink/styles';
 
+
+export const Grid = styled.div`
+    width: 100%;
+    display:block;
+`
 export const Container = styled.div`
     ${({ theme }) => css`
-        position:fixed;
         z-index:999;
-        top:0;
-        left: 0;
-        right: 0;
-        bottom:0;
+        height:80px;
         width: 100%;
         border-bottom: ${theme.colors.blueColor};
         display:flex;
-
+        align-items: center;
+        justify-content: center;
+        background: ${theme.colors.blueColor};
+    
         & ${Logo}{
-            margin-left:410px;
+           
         }
 
-        @media ${theme.media.lteMediumx} {
-            
-            height: 12vh;
-            & ${Logo}{
-                margin-left:310px;
-                margin-top:-10px;
-               
-            }
-        }
+    `}
+    
+`;
+
+export const Container2 = styled.div`
+    ${({ theme }) => css`
+        width:100%;
+        border-bottom: ${theme.colors.blueColor};
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        background: ${theme.colors.blueColor};
+        height:30px;
+        position: relative;
+       
         
+       
+        & ${Logo}{
+           
+        }
+
     `}
     
 `;
@@ -36,16 +51,9 @@ export const SubNav = styled.div`
         display:flex;
         align-items: center;
         justify-content:center;
-        position:absolute;
-        height:7vh;
         background: ${theme.colors.blueColor};
         width:100%;
-        top:100%;
-        z-index:-1;
-
-        
-
-
+        height:50px;
     `}
 `;
 
@@ -65,21 +73,52 @@ export const MenuContainer = styled.div`
     `}
 `;
 
-export const SupNav = styled.div`
-        ${({theme}) => css`
-            display:flex;
-            width:100%;
-            background: ${theme.colors.blueColor};
 
-           > nav {
-               display:flex;
-          
-              
-           }
-         
-         
-           
+export const SupNav = styled.div`
+        ${() => css`
+            display:flex;
             
-    `}
-`;
+
+            .pink-span {
+                color:White;
+                font-size:15px;
+                font-weight:100;
+                padding:5px;
+                
+            }
+            
+            .whatsappIcon {
+                width:25px;
+                height:25px;
+                color:white;
+                
+                
+            }
+            > nav {
+                display: flex;
+            
+                > ul {
+                    display:flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    list-style: none;
+                    padding: 0;
+                    justify-content: center;
+                    align-items: center;
+
+                    > li {
+                        padding: 5px;
+                        list-style: none;
+                        text-align: center;
+                        color: white;
+                        font-size: 14px;
+                        justify-content: center;
+                        align-items: center;
+                        display: flex;
+                                     
+                    }
+                }
+        `   }
+    `
+;
 

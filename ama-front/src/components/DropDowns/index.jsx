@@ -2,7 +2,10 @@
 import * as Styled from './styles';
 import P from 'prop-types';
 import React , {useState} from  'react';
-
+import { TiHome } from 'react-icons/ti'
+import { MdBrightnessAuto } from 'react-icons/md'
+import { GiThreeFriends } from 'react-icons/gi'
+import { GiLifeSupport } from 'react-icons/gi'
 
 
 
@@ -48,7 +51,7 @@ export const DropDowns = () => {
     return (
     <Styled.Container>
         <ul>
-            <li><a  onMouseEnter={onClick}>Ama +</a>
+            <li><TiHome className="icons"/><a  onMouseEnter={onClick}>Ama +</a>
                 <Styled.SubNav isActive={isActive}>
                     {mock.map((mocks) => (
                         <Styled.Grid key={mocks.id} hoverColor={mocks.hoverColor} background={mocks.background}>
@@ -61,10 +64,10 @@ export const DropDowns = () => {
                         ))}
                 </Styled.SubNav>
             </li>
-            <li><a  onMouseEnter={onClick}>Autismo</a></li>
-            <li><a  onMouseEnter={onClick}>Voce e a Ama</a></li>
-            <li><a  onMouseEnter={onClick}>Contato</a></li>
-            <li><a  onMouseEnter={onClick}>Loja Virtual</a></li>  
+            <li><MdBrightnessAuto className="icons"/><a  onMouseEnter={onClick}>Autismo</a></li>
+            <li><GiThreeFriends className="icons"/><a  onMouseEnter={onClick}>Voce e a Ama</a></li>
+            <li><GiLifeSupport className="icons"/><a  onMouseEnter={onClick}>Contato</a></li>
+            
         </ul>
     </Styled.Container>
   );
