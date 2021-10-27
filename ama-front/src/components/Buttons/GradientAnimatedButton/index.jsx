@@ -18,7 +18,8 @@ export const GrButton = (
             colorFour = defaultFour,
             width = defaultWidth,
             height = defaultHeight,
-            text = defaultText
+            text = defaultText,
+            link = ""
 
         }) => {
 
@@ -30,8 +31,9 @@ export const GrButton = (
             colorFour = {colorFour}
             width = {width}
             height = {height}
+            to = {link}
         >
-            {text}         
+            <span>{text}</span>        
         </Styled.GrButtonStyle>  
     );
 };
@@ -44,4 +46,5 @@ GrButton.propTypes = {
     colorFour: P.string.isRequired,
     width: P.string,
     height: P.string,
+    link: P.string,
 };

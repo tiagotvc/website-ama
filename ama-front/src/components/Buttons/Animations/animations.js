@@ -33,12 +33,29 @@ export const fadeInFromNone = keyframes`
     }
 
     1% {
-        display: block;
+        display: flex;
         opacity: 0;
     }
 
     100% {
-        display: block;
+        display: flex;
         opacity: 1;
+    }
+`
+
+export const fadeInToNone = keyframes`
+ 0% {
+        display: flex;
+        opacity: 1;
+    }
+
+    1% {
+        display: flex;
+        opacity: 1;
+    }
+
+    100% {
+        display: none;
+        opacity: 0;
     }
 `

@@ -2,12 +2,13 @@ import styled, { css } from 'styled-components';
 import { Container as Logo } from '../LogoLink/styles';
 
 
+
 export const Grid = styled.div`
     width: 100%;
     display:block;
 `
 export const Container = styled.div`
-    ${({ theme }) => css`
+    ${({ theme, background }) => css`
         z-index:999;
         height:80px;
         width: 100%;
@@ -15,7 +16,10 @@ export const Container = styled.div`
         display:flex;
         align-items: center;
         justify-content: center;
-        background: ${theme.colors.blueColor};
+        background: ${background === 'shop'? '#764abc': theme.colors.blueColor};
+        -webkit-transition: all  1000ms linear;
+        -ms-transition: all linear;
+        transition: all 1000ms linear;
     
         & ${Logo}{
            
@@ -26,18 +30,17 @@ export const Container = styled.div`
 `;
 
 export const Container2 = styled.div`
-    ${({ theme }) => css`
+    ${({ theme, menu }) => css`
         width:100%;
         border-bottom: ${theme.colors.blueColor};
-        display:flex;
+        display:${menu === 'shop'? 'none': 'flex'};
         align-items: center;
         justify-content: center;
         background: ${theme.colors.blueColor};
         height:30px;
         position: relative;
-       
-        
-       
+        transition: opacity 1s ease-out;
+
         & ${Logo}{
            
         }
@@ -47,13 +50,16 @@ export const Container2 = styled.div`
 `;
 
 export const SubNav = styled.div`
-    ${({ theme}) => css`
+    ${({ theme, background}) => css`
         display:flex;
         align-items: center;
         justify-content:center;
-        background: ${theme.colors.blueColor};
+        background: ${background == 'shop'? '#764abc': theme.colors.blueColor};
         width:100%;
         height:50px;
+        -webkit-transition: all  1000ms linear;
+        -ms-transition: all linear;
+        transition: all 1000ms linear;
     `}
 `;
 
@@ -87,36 +93,9 @@ export const SupNav = styled.div`
                 
             }
             
-            .whatsappIcon {
-                width:25px;
-                height:25px;
-                color:white;
-                
-                
-            }
             > nav {
                 display: flex;
             
-                > ul {
-                    display:flex;
-                    flex-direction: row;
-                    flex-wrap: wrap;
-                    list-style: none;
-                    padding: 0;
-                    justify-content: center;
-                    align-items: center;
-
-                    > li {
-                        padding: 5px;
-                        list-style: none;
-                        text-align: center;
-                        color: white;
-                        font-size: 14px;
-                        justify-content: center;
-                        align-items: center;
-                        display: flex;
-                                     
-                    }
                 }
         `   }
     `

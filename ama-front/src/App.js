@@ -1,11 +1,11 @@
-import React from 'react';
+import styled, {css} from 'styled-components';
 
-function App() {
-  return (
-    <div className="App">
-      <h1>hellow</h1>
-    </div>
-  );
-}
 
-export default App;
+export const Wrapper = styled.div`
+    ${({ theme, wasIsDash }) => css`
+        background: ${theme.colors.mainBg};
+        visibility: ${wasIsDash? "hidden": "visible"};
+        display: ${wasIsDash? "none": "flex"};
+    `}
+`;
+
