@@ -52,15 +52,14 @@ export const News = styled.div`
     position:relative;
 
     > div {
-        margin: 0 auto;
+        margin: 0 auto ;
 	    transform: skewY(-4deg);
+        max-width: 75vw;
     }
     
     `
 
 export const Popular = styled.div`
-display:block;
-justify-content: center;
-text-align:center;
+  
 `
 

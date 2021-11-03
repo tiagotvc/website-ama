@@ -6,6 +6,7 @@ import Slider from '../../components/Slider';
 import links from '../../components/NavLinks/mock'
 
 import { Menu } from '../../components/Menu';
+import ShowCase from '../../components/Showcase';
 
 export default function Loja () {
 
@@ -18,14 +19,11 @@ export default function Loja () {
             />
         </Styled.Wrapper>
         <Styled.Content>
-                <div className="slider">
-                   <Slider/>
-                </div>
+            <div className="slider">
+                <Slider/>
+            </div>
             <Styled.News>
-                <div>
-                    
-                </div>
-
+                <div><ShowCase/></div>
             </Styled.News>
             <Styled.Popular>
                <div className="heading">
